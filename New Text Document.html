@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    
+</head>
+<body>
+  <h1>People entered:</h1>
+  <h2 id= "count">0</h2>
+  <button id="increment-btn" onclick="increment()">inc</button>
+  <button id="sv-btn" onclick="save()">save</button> 
+  <p id="save-el">Previous entires: </p>
+
+  <script>
+  //document.getElementById("count").innerText =7
+  let countel=document.getElementById("count")
+  let saveel=document.getElementById("save-el")
+  //console.log(countel)
+  let count=0
+  
+  function increment() {
+  count=count+1
+  countel.innerText=count
+  console.log(count)
+}
+
+
+  function save(){
+  let countstr=" "+count+" - "
+  saveel.innerText +=countstr
+  countel.textContent=0
+  count=0
+
+}
+</script>  
+</body>
+</html>
